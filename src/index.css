@@ -8,6 +8,11 @@ body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   font-size: 16px;
   font-weight: 400;
+
+  background: #C33764;
+  background: -webkit-linear-gradient(to top, #1D2671, #C33764);
+  background: linear-gradient(to top, #1D2671, #C33764);
+
 }
 
 img {
