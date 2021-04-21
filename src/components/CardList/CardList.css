@@ -1,0 +1,16 @@
+.card-list {
+  display: grid;
+  grid-template-rows: 95px 95px 95px 95px 95px 95px;
+  grid-template-columns: 60px 60px 60px 60px 60px 60px;
+  gap: 10px;
+
+  justify-content: center;
+
+
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+
+  border: 1px solid red;
+  list-style: none;
+}
