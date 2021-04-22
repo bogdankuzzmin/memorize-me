@@ -1,0 +1,123 @@
+.card-item {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 95px;
+
+  color: #000000;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+
+  box-shadow: 2px 2px 0px #000000;
+  
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card-item__suit {
+  position: absolute;
+  font-size: 12px; 
+}
+
+.card-item__top-left .card-item__suit {
+  top: 20px;
+  left: 10px;
+}
+
+.card-item__bottom-right .card-item__suit {
+  bottom: 20px;
+  right: 10px; 
+
+  transform: rotate(180deg);
+}
+
+.card-item__rank {
+  position: absolute;
+  font-size: 16px;  
+}
+
+.card-item__top-left .card-item__rank {
+  top: 5px;
+  left: 8px;
+}
+
+.card-item__bottom-right .card-item__rank {
+  right: 8px;
+  bottom: 5px;  
+
+  transform: rotate(180deg);
+}
+
+.card-item__suit-center {
+  font-size: 38px;
+}
+
+.card-item__rank--heart,
+.card-item__rank--diamond {
+  color: red;
+}
+
+.card-item__rank--spade,
+.card-item__rank--club {
+  color: #000000;
+}
+
+.card-item__suit--heart:before {
+  content: '\2665';
+  color: red;
+}
+
+.card-item__suit--club:before {
+  content: '\2663';
+  color: #000000;
+}
+
+.card-item__suit--spade:before {
+  content: '\2660';
+  color: #000000;
+}
+
+.card-item__suit--diamond:before {
+  content: '\2666';
+  color: red;
+}
+
+.card-item__back-card,
+.card-item__back-card,
+.card-item__back-card  {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  height: 100%;
+  width: 100%;
+
+  transition: all 0.5s;
+  cursor: not-allowed;
+}
+
+.card-item__back-card--closed {
+  background-color: #b22222;
+  cursor: pointer;
+}
+
+.card-item__back-card--guessed {
+  background-color: #0a690a;
+}
+
+.card-item__back-card--desabled {
+  background-color: #6b747c;
+}
+
+@media (max-width: 767px) {
+  .card-item__suit-center {
+    font-size: 24px;
+  }
+}
