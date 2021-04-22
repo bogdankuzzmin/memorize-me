@@ -11,10 +11,12 @@ const Stopwatch = props => {
       if (!props.stopGame) {
         interval = setInterval(startStopwatch, 1000);
       }
+
+      props.scoreHandler(min, sec);
     }
 
     return () => clearInterval(interval);
-  }, [seconds, minutes, props.startGame]);
+  }, [seconds]);
 
   
   const startStopwatch = () => {
@@ -27,14 +29,12 @@ const Stopwatch = props => {
     }
   };
 
-  const min = minutes <= 9 ? `0${minutes}`: minutes;
+  const min = minutes <= 9 ? `0${minutes}` : minutes;
   const sec = seconds <= 9 ? `0${seconds}` : seconds;
 
   return (
-    <div>
-      <span>Time: </span>
-      <span style={{marginRight: '10px'}}>{min} min.</span>
-      <span>{sec} sec.</span>
+    <div className="stopwatch">
+      <div>Time: {min}:{sec} </div>
     </div>
   );
 };
