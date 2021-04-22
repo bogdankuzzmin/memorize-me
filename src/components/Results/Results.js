@@ -31,7 +31,7 @@ const Results = props => {
         }
 
         const sortedResults = [...fetchResults].sort((a, b) => a.sortTime - b.sortTime);
-
+        
         setResults(sortedResults);
         setLoading(false);
       })
@@ -78,7 +78,6 @@ const Results = props => {
         <Link to="/" className="results__button">Home</Link>
         {table}
       </div>
-
     </section>
   );
 };

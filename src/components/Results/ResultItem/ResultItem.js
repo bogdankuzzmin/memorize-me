@@ -5,7 +5,7 @@ const resultItem = props => {
 
   return (
     <tr>
-      <td>{index}</td>
+      <td className="results__number">{index}</td>
       <td className="results__name">{name}</td>
       <td>{time}</td>
       <td>{fail}</td>
