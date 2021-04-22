@@ -9,10 +9,23 @@ body {
   font-size: 16px;
   font-weight: 400;
 
-  background: #C33764;
-  background: -webkit-linear-gradient(to top, #1D2671, #C33764);
-  background: linear-gradient(to top, #1D2671, #C33764);
+  background: #3C3B3F;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+  background-size: 200% 200%;
 
+  animation: gradient 15s ease-in-out infinite ;
+}
+
+@keyframes gradient {
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 img {
