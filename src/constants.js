@@ -154,4 +154,10 @@ export const SPADES = [
   }
 ];
 
+export const GameLevel = {
+  easy: 10,
+  normal: 18,
+  hard: 21,
+};
+
 export const allCards = HEARTS.concat(CLUBS).concat(DIAMONDS).concat(SPADES);
