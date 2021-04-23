@@ -11,7 +11,7 @@ const gamePage = props => {
     finishBlock = (
       <div className="game-page__finish">
         <p className="game-page__finish-text">Great Job!</p>
-        <Link to="/results" className="game-page__button">Results</Link>
+        <Link to="/results" className="game-page__button" onClick={props.resetGame}>Results</Link>
         <Link to="/" className="game-page__button" onClick={props.resetGame}>Home</Link>
       </div>
     );

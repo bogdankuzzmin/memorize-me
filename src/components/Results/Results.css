@@ -16,6 +16,10 @@
 }
 
 .results__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   max-height: 95vh;
 
   overflow-y: auto;
@@ -33,6 +37,7 @@
 
   margin-bottom: 15px;
   padding: 10px 15px;
+  width: 100%;
 
   color: #000000;
   font-weight: 700;
