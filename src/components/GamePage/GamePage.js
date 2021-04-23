@@ -1,3 +1,4 @@
+import {Fragment} from 'react';
 import {Link} from 'react-router-dom';
 
 import './GamePage.css';
@@ -9,11 +10,10 @@ const gamePage = props => {
   let finishBlock;
   if (props.stopGame) {
     finishBlock = (
-      <div className="game-page__finish">
+      <Fragment>
         <p className="game-page__finish-text">Great Job!</p>
         <Link to="/results" className="game-page__button" onClick={props.resetGame}>Results</Link>
-        <Link to="/" className="game-page__button" onClick={props.resetGame}>Home</Link>
-      </div>
+      </Fragment>
     );
   }
 
@@ -36,7 +36,10 @@ const gamePage = props => {
           
           <p>Fails: {props.fails}</p>
 
-          {finishBlock}
+          <div className="game-page__finish">
+            {finishBlock}
+            <Link to="/" className="game-page__button" onClick={props.resetGame}>Home</Link>
+          </div>
         </div>
       </div>
     </section>
