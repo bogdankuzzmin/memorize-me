@@ -5,7 +5,7 @@ import axios from './axios-results';
 import './App.css';
 
 import {getCards} from './units';
-import {allCards} from './constants';
+import {allCards, GameLevel} from './constants';
 
 import StartPage from './components/StartPage';
 import Results from './components/Results';
@@ -24,13 +24,12 @@ const App = props => {
   const [playerScore, setPlayerScore] = useState('');
   const [fails, setFails] = useState(0);
 
-
   useEffect(() => {
     if (cards.length === 0) {
       setCards(getCards(allCards));
     }
 
-    if (gameCounter === 18) {
+    if (gameCounter === GameLevel.normal) {
       setStopGame(true);
       sendResults();
     }
