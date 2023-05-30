@@ -87,11 +87,7 @@ const App = props => {
       fail: fails
     };
 
-    console.log(resultData);
     axios.post('/results.json', resultData)
-      .then((response) => {
-        console.log(response);
-      })
       .catch((error) => {
         console.log('something went wrong');
       });
